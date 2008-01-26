@@ -1,0 +1,10 @@
+Changes
+Makefile.PL
+MANIFEST
+README
+t/WEC-SMTP.t
+lib/WEC/SMTP/Server.pm
+lib/WEC/SMTP/Client.pm
+lib/WEC/SMTP/Connection/Server.pm
+lib/WEC/SMTP/Connection/Client.pm
+lib/WEC/SMTP/Constants.pm
