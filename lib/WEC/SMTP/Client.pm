@@ -7,7 +7,7 @@ use Carp;
 use WEC::SMTP::Connection::Client;
 use WEC::SMTP::Constants qw(PORT);
 
-our $VERSION = "0.01";
+our $VERSION = "1.000";
 our @CARP_NOT	= qw(WEC::FieldClient);
 
 use base qw(WEC::Client);

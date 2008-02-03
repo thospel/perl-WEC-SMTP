@@ -8,3 +8,4 @@ lib/WEC/SMTP/Client.pm
 lib/WEC/SMTP/Connection/Server.pm
 lib/WEC/SMTP/Connection/Client.pm
 lib/WEC/SMTP/Constants.pm
+md5-versions

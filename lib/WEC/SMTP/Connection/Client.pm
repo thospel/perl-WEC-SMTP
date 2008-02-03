@@ -11,7 +11,7 @@ my $crlf = "$cr$lf";
 
 use WEC::Connection qw(SERVER CLIENT);
 
-our $VERSION = "0.01";
+our $VERSION = "1.000";
 
 use base qw(WEC::Connection);
 
