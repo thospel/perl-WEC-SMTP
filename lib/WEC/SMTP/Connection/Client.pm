@@ -114,7 +114,7 @@ sub ehlo {
     for (@$extensions) {
 	my ($keyword, @params) = split " ", uc $_;
 	next unless defined $keyword;
-	die "Multiple declarations of extension $keyword" if 
+	die "Multiple declarations of extension $keyword" if
 	    $extensions{$keyword};
 	$extensions{$keyword} = \@params;
     }
@@ -135,7 +135,7 @@ sub helo {
     }
     $connection->parse_hello(shift @$answer);
     $connection->{extensions} = undef;
-    
+
     print STDERR "helo=$code @$answer\n";
     $connection->{in_state} = \&silence;
     $connection->end_handshake;
@@ -168,7 +168,7 @@ sub mail {
     $mode = "text" if !defined $mode;
     $mode = uc $mode;
     $allowed_modes{$mode} || die "Unknown mode '$mode'";
-    
+
     # Should do more serious rfc checking here --Ton
     croak "Invalid From" if $from =~ /$lf/;
 
@@ -201,7 +201,7 @@ sub quit {
 
 sub start_command {
     my __PACKAGE__ $connection = shift;
-    return if 
+    return if
 	!@{$connection->{to_do}} || $connection->{in_state} != \&silence;
     my $command = $connection->{to_do}[0][0];
     if ($command eq "QUIT") {
