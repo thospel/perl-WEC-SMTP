@@ -23,7 +23,7 @@ sub mail {
     my ($sec,$min,$hour,$mday,$mon,$year) = gmtime;
     my $file = sprintf("cyc_%04d%02d%02d%02d%02d%02d.%03d", 
 		       $year+1900, $mon+1, $mday, $hour, $min, $sec, $n++);
-    open(my $fh, ">", $file) || die "Could not create $file: $!";
-    print($fh $data) || die "Could not write $file: $!";
-    close($fh) || die "Could not close $file: $!";
+    open(my $fh, ">", $file) || die "Could not create '$file': $!";
+    print($fh $data) || die "Could not write '$file': $!";
+    close($fh) || die "Could not close '$file': $!";
 }
