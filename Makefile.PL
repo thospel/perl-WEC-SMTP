@@ -8,9 +8,12 @@ $VERSION = "1.000";
 WriteMakefile
     (NAME	=> 'WEC::SMTP',
      VERSION	=> '0.01', # finds $VERSION
+     BUILD_REQUIRES	=> {
+         # Only for the tests
+         "Test::More"	=> "0.01",
+     },
      PREREQ_PM	=> {
 	 WEC		=> 0.01,
-	 "Test::More"	=> 0.11,	# For the tests only
      },
      AUTHOR	=> 'Ton Hospel <WEC::SMTP@ton.iguana.be>',
      $^O eq "MSWin32" ? (
